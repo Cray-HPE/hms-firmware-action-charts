@@ -8,3 +8,4 @@ jobs:
       target-branch: main
     secrets:
       jfrog-cli-configuration: ${{ secrets.ARTIFACTORY_ALGOL60_JFROG_CLI_CONFIGURATION }}
+
