@@ -27,6 +27,7 @@ spec:
         - name: "smoke"
           image: "{{ .Values.tests.image.repository }}:{{ .Values.global.testVersion }}"
           command:
+            - entrypoint.sh
             - smoke
             - -f
             - smoke.json
