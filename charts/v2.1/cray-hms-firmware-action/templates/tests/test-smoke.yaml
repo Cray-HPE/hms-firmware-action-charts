@@ -26,4 +26,9 @@ spec:
       containers:
         - name: "smoke"
           image: "{{ .Values.tests.image.repository }}:{{ .Values.global.testVersion }}"
-          command: "smoke -f smoke.json -u http://cray-fas"
+          command:
+            - smoke
+            - -f
+            - smoke.json
+            - -u
+            - http://cray-fas
