@@ -25,5 +25,5 @@ spec:
         runAsGroup: 65534
       containers:
         - name: "{{ .Release.Name }}-test"
-          image: {{ .Values.tests.image | quote }}
+          image: "{{ .Values.tests.image.repository }}:{{ .Values.global.testVersion }}"
           entrypoint: entrypoint.sh smoke -f smoke.json -u http://cray-fas

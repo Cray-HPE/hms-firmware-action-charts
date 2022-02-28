@@ -8,12 +8,17 @@
 #   pullPolicy: "" (default = "IfNotPresent")
 global:
   appVersion: 1.18.0
+  testVersion: 1.18.0
 image:
   repository: artifactory.algol60.net/csm-docker/stable/cray-firmware-action
   pullPolicy: IfNotPresent
 nexus:
   endpoint: http://nexus.nexus.svc.cluster.local
   repo: shasta-firmware
+tests:
+  image:
+    repository: artifactory.algol60.net/csm-docker/stable/cray-firmware-action-test
+    pullPolicy: IfNotPresent
 
 hms_ca_uri: ""
 cray-service:
@@ -142,5 +147,4 @@ cray-service:
     enabled: true
     uri: "/"
     prefix: "/apis/fas/v1/"
-  tests:
-    image: artifactory.algol60.net/csm-docker/stable/cray-firmware-action-test
+
