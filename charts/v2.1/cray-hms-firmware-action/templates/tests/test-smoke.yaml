@@ -25,7 +25,7 @@ spec:
         runAsGroup: 65534
       initContainers:
         - name: wait-for-istio
-          image: "artifactory.algol60.net/docker.io/curlimages/curl"
+          image: "artifactory.algol60.net/docker.io/curlimages/curl:7.81.0"
           command: [ "sh", "-c", "until curl --head localhost:15000 ; do echo Waiting for Istio Sidecar; sleep 3 ; done ; echo Istio Sidecar available; done;" ]
       containers:
         - name: "smoke"
