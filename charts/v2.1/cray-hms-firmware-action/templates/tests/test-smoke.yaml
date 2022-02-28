@@ -13,6 +13,13 @@ spec:
   template:
     metadata:
       name: "{{ .Release.Name }}-test-smoke"
+      annotations:
+        pod.beta.kubernetes.io/init-containers: '[
+          {
+            "name": "init-helm-test",
+            "image": "artifactory.algol60.net/docker.io/curlimages/curl",
+            "command": [ "sh", "-c", "until curl --head localhost:15000 ; do echo Waiting for Istio Sidecar; sleep 3 ; done ; echo Istio Sidecar available; done;" ]
+          }]'
       labels:
         app.kubernetes.io/managed-by:  "{{ include "cray-service.name" . }}"
         app.kubernetes.io/instance:  "{{ .Release.Name }}-test-smoke"
