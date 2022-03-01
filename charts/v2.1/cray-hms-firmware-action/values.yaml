@@ -18,7 +18,7 @@ nexus:
 tests:
   image:
     repository: artifactory.algol60.net/csm-docker/stable/cray-firmware-action-test
-    pullPolicy: IfNotPresent
+    pullPolicy: Always
 
 hms_ca_uri: ""
 cray-service:
