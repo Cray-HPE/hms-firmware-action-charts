@@ -23,7 +23,7 @@ spec:
         runAsNonRoot: true
         runAsUser: 65534
         runAsGroup: 65534
-        containers:
+      containers:
         - name: "smoke"
           image: "{{ .Values.tests.image.repository }}:{{ .Values.global.testVersion }}"
           command: ["/bin/sh", "-c"]
