@@ -21,3 +21,6 @@
 .vscode
 
 *.tgz
+.idea/
+
+Chart.lock
