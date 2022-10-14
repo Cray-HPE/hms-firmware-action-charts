@@ -7,8 +7,8 @@
 #   tag: "" (default = "latest")
 #   pullPolicy: "" (default = "IfNotPresent")
 global:
-  appVersion: 1.19.0
-  testVersion: 1.19.0
+  appVersion: 1.19.1
+  testVersion: 1.19.1
 image:
   repository: artifactory.algol60.net/csm-docker/stable/cray-firmware-action
   pullPolicy: IfNotPresent
