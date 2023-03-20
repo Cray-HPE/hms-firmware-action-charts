@@ -8,8 +8,8 @@
 #   pullPolicy: "" (default = "IfNotPresent")
 
 global:
-  appVersion: 1.24.0
-  testVersion: 1.24.0
+  appVersion: 1.27.0
+  testVersion: 1.27.0
 
 image:
   repository: artifactory.algol60.net/csm-docker/stable/cray-firmware-action
@@ -31,8 +31,26 @@ cray-etcd-base:
   fullnameOverride: "cray-fas"
   etcd:
     enabled: true
-    fullnameOverride: "cray-fas-etcd"
-    nameOverride: "cray-fas-etcd"
+    fullnameOverride: "cray-fas-bitnami-etcd"
+    nameOverride: "cray-fas-bitnami-etcd"
+    extraEnvVars:
+      - name: ETCD_HEARTBEAT_INTERVAL
+        value: "4200"
+      - name: ETCD_ELECTION_TIMEOUT
+        value: "21000"
+      - name: ETCD_MAX_SNAPSHOTS
+        value: "5"
+      - name: ETCD_QUOTA_BACKEND_BYTES
+        value: "10737418240"
+      - name: ETCD_SNAPSHOT_COUNT
+        value: "10000"
+      - name: ETCD_SNAPSHOT_HISTORY_LIMIT
+        value: "24"
+    extraVolumes:
+      - configMap:
+          defaultMode: 420
+          name: cray-fas-bitnami-etcd-config
+        name: etcd-config
 
 cray-service:
   type: "Deployment"
