@@ -1,6 +1,6 @@
 apiVersion: v2
 name: "cray-hms-firmware-action"
-version: 2.1.7.
+version: 2.1.7
 description: "Kubernetes resources for cray-hms-firmware-action"
 home: "https://github.com/Cray-HPE/hms-firmware-action-charts"
 sources:
