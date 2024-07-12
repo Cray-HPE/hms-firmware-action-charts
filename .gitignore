@@ -33,3 +33,6 @@ Chart.lock
 *.csr
 *.key
 *.pem
+
+# vim
+*.swp
