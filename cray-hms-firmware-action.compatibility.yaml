@@ -1,8 +1,14 @@
 ---
 # CSM Version is not really following semver.
 chartVersionToCSMVersion:
+  # Summary:
+  #   Chart Version: 2.0.0 <= x.y.z < 2.1.0, CSM Version: 1.2.0 <= x.y.z < 1.3.0
+  #   Chart Version: 2.1.0 <= x.y.z < 3.0.0, CSM Version: 1.3.0 <= x.y.z < 1.5.0
+  #   Chart Version: 3.0.0 <= x.y.z < 3.1.0, CSM Version: 1.5.0 <= x.y.z < 1.6.0
+  #   Chart Version: 3.1.0 <= x.y.z,         CSM Version: 1.6.0 <= x.y.z
+  #
   # Chart version: CSM version
-  ">=2.0.0": "~1.2.0" # Chart Version: 2.0.0 <= x.y.z, CSM Version: 1.2.0 <= x.y.z < 1.3.0
+  ">=2.0.0": "~1.2.0"
   ">=2.1.0": "~1.3.0"
   ">=3.0.0": "~1.5.0"
   ">=3.1.0": "~1.6.0"
@@ -40,6 +46,7 @@ chartVersionToApplicationVersion:
   "3.1.3": "1.32.0"
   "3.1.4": "1.33.0"
   "3.1.5": "1.33.0"
+  "3.1.6": "1.33.0"
 
 # Test results for combinations of Chart, Application, and CSM versions.
 chartValidationLog: []
