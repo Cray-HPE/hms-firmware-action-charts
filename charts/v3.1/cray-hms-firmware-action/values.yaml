@@ -8,8 +8,8 @@
 #   pullPolicy: "" (default = "IfNotPresent")
 
 global:
-  appVersion: 1.33.0
-  testVersion: 1.33.0
+  appVersion: 1.34.0
+  testVersion: 1.34.0
 
 image:
   repository: artifactory.algol60.net/csm-docker/stable/cray-firmware-action
@@ -120,6 +120,8 @@ cray-service:
           value: "SERVICE"
         - name: TFTP_ENDPOINT
           value: tftp://cray-tftp.hmnlb.local
+        - name: DAYS_TO_KEEP_ACTIONS
+          value: 60
         - name: S3_ENDPOINT
           valueFrom:
             secretKeyRef:
