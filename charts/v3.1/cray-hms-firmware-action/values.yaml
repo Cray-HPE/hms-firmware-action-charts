@@ -121,7 +121,7 @@ cray-service:
         - name: TFTP_ENDPOINT
           value: tftp://cray-tftp.hmnlb.local
         - name: DAYS_TO_KEEP_ACTIONS
-          value: 60
+          value: "60"
         - name: S3_ENDPOINT
           valueFrom:
             secretKeyRef:
