@@ -8,8 +8,8 @@
 #   pullPolicy: "" (default = "IfNotPresent")
 
 global:
-  appVersion: 1.33.1
-  testVersion: 1.33.1
+  appVersion: 1.35.0
+  testVersion: 1.35.0
 
 image:
   repository: artifactory.algol60.net/csm-docker/stable/cray-firmware-action
