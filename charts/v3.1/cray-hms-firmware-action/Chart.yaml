@@ -15,7 +15,7 @@ dependencies:
 maintainers:
   - name: Hardware Management
     url: https://github.com/orgs/Cray-HPE/teams/hardware-management
-appVersion: "1.38.0"
+appVersion: "1.38.0" # update pprof image version below as well
 annotations:
   artifacthub.io/images: |-
     - name: cray-hms-firmware-action-pprof
