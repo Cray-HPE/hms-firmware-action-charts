@@ -17,4 +17,7 @@ maintainers:
     url: https://github.com/orgs/Cray-HPE/teams/hardware-management
 appVersion: "1.38.0"
 annotations:
+  artifacthub.io/images: |-
+    - name: cray-hms-firmware-action-pprof
+      image: artifactory.algol60.net/csm-docker/stable/cray-firmware-action-pprof:1.38.0
   artifacthub.io/license: "MIT"
