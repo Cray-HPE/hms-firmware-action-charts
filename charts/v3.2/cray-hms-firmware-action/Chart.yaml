@@ -1,6 +1,6 @@
 apiVersion: v2
 name: "cray-hms-firmware-action"
-version: 3.2.1
+version: 3.2.2
 description: "Kubernetes resources for cray-hms-firmware-action"
 home: "https://github.com/Cray-HPE/hms-firmware-action-charts"
 sources:
@@ -15,9 +15,9 @@ dependencies:
 maintainers:
   - name: Hardware Management
     url: https://github.com/orgs/Cray-HPE/teams/hardware-management
-appVersion: "1.40.0"  # update pprof image version below as well
+appVersion: "1.41.0"  # update pprof image version below as well
 annotations:
   artifacthub.io/images: |-
     - name: cray-hms-firmware-action-pprof
-      image: artifactory.algol60.net/csm-docker/stable/cray-firmware-action-pprof:1.40.0
+      image: artifactory.algol60.net/csm-docker/stable/cray-firmware-action-pprof:1.41.0
   artifacthub.io/license: "MIT"
